@@ -14,17 +14,22 @@ def get_conn():
                            charset = "utf8")
     return conn
 
-
+# CalBeatiful
 class User(object):
-    def __init__(self,user_id,user_name):
-        self.user_id = user_id
-        self.user_name = user_name
+    def __init__(self,title,detail_url,icon_url,bbs_id,bbs_name,sub_title,bbs_url):
+        self.title = title
+        self.detail_url = detail_url
+        self.icon_url = icon_url
+        self.bbs_id = bbs_id
+        self.bbs_name = bbs_name
+        self.sub_title = sub_title
+        self.bbs_url = bbs_url
 
     def save(self):
         conn = get_conn()
         cursor = conn.cursor()
-        sql = "INSERT into user (user_id,user_name) values (%s,%s)"
-        cursor.execute(sql,(self.user_id,self.user_name))
+        sql = "INSERT into CalBeatiful (title,detail_url,icon_url,bbs_id,bbs_name,sub_title,bbs_url) values (%s,%s,%s,%s,%s,%s,%s)"
+        cursor.execute(sql,(self.title,self.detail_url,self.icon_url,self.bbs_id,self.bbs_name,self.sub_title,self.bbs_url))
         conn.commit()
         cursor.close()
         conn.close()
@@ -33,7 +38,7 @@ class User(object):
     def query_all():
         conn = get_conn()
         cursor = conn.cursor()
-        sql = "SELECT * from user"
+        sql = "SELECT * from CalBeatiful"
         cursor.execute(sql)
         rows = cursor.fetchall()
         users = []
@@ -46,4 +51,4 @@ class User(object):
         return users
 
     def __str__(self):
-        return "id:{}-name:{}".format(self.user_id,self.user_name)
+        return "id:{}-name:{}".format(self.title,self.detail_url)
