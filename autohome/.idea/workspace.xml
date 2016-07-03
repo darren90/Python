@@ -25,15 +25,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="tv.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="tv.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tv.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="65">
-              <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+            <state relative-caret-position="473">
+              <caret line="96" column="0" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
               <folding>
                 <element signature="e#24#53#0" expanded="true" />
                 <marker date="1467551738000" expanded="true" signature="2510:2760" ph="insert into fei.... " />
                 <marker date="1467551738000" expanded="true" signature="5610:5865" ph="insert into DBURL... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1467467738000" expanded="true" signature="613:664" ph="INSERT into user... " />
+                <marker date="1467467738000" expanded="true" signature="902:920" ph="SELECT * fro... user" />
               </folding>
             </state>
           </provider>
@@ -438,12 +451,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tv.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65">
-          <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+        <state relative-caret-position="473">
+          <caret line="96" column="0" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
           <folding>
             <element signature="e#24#53#0" expanded="true" />
             <marker date="1467551738000" expanded="true" signature="2510:2760" ph="insert into fei.... " />
             <marker date="1467551738000" expanded="true" signature="5610:5865" ph="insert into DBURL... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1467467738000" expanded="true" signature="613:664" ph="INSERT into user... " />
+            <marker date="1467467738000" expanded="true" signature="902:920" ph="SELECT * fro... user" />
           </folding>
         </state>
       </provider>
