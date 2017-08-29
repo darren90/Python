@@ -38,9 +38,9 @@ class spider(object):
     def parse_html_data(self,html_countent):
      res_array = []
      res_data = {}
-     soup = BeautifulSoup(html_countent, "html.parser",from_encoding='gb2312')
-     links = soup.find('ul', class_="content position")
-
+     soup = BeautifulSoup(html_countent, "html.parser")
+     links = soup.find('ul', class_="content")
+     # print links
      if links is None:
         return []
      for link in links.find_all('li'):
@@ -51,26 +51,25 @@ class spider(object):
 
         # 帖子的标题
         title = new_link['title']
+        # print title
 
         # 图片地址
         icon_url = new_link.find('img')['src']
 
         # 副标题
         sub_title = link.find('span').get_text()
-
         # 发帖人id
         bbs_id = link.find('dt').find('a').get_text()
 
-        bbs__ = link.find('dd', class_="font12NoLine").find('a')
+        # bbs__ = link.find('dd', class_="font12NoLine").find('a')
 
         # 文章所在的论坛名字
-        bbs_name = bbs__.get_text()
+        bbs_name = ""#bbs__.get_text()
 
-        #文章所在轮胎的地址
-        bbs_url = urlparse.urljoin("http://club.autohome.com.cn",bbs__['href'])
-
+        #文章所在论坛的地址
+        bbs_url = ""#urlparse.urljoin("http://club.autohome.com.cn",bbs__['href'])
         user = User(title,detail_url,icon_url,bbs_id,bbs_name,sub_title,bbs_url)
-        # user.save()
+        user.save()
 
 if __name__ == '__main__':
     fialCount = 1
@@ -88,7 +87,7 @@ if __name__ == '__main__':
             count = count +1
         except Exception as e:
             if fialCount == 10200:
-                fout.close()
+                # fout.close()
                 break
             fialCount = fialCount + 1
             count = count +1
