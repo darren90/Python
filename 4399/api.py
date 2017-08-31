@@ -30,6 +30,9 @@ tasks = [
     }
 ]
 
+@app.route('/index')
+def index():
+    return "hello tengfei"
 
 @app.route('/error')
 def not_found():
