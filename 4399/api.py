@@ -30,6 +30,11 @@ tasks = [
     }
 ]
 
+
+@app.route('/error')
+def not_found():
+    return jsonify({'error': 'Not found'})
+
 @app.route('/list/<page>')
 def get_list(page):
     games = GameNews.query_all(int(page))
