@@ -1,5 +1,17 @@
+#-*- coding: UTF-8 -*-
+
 #!flask/bin/python
 from flask import Flask, jsonify,abort
+from bs4 import BeautifulSoup
+import requests
+import re
+import types
+import urlparse
+import sys
+from Gmodels import GameNews
+
+reload(sys)
+sys.setdefaultencoding("utf-8")
 
 app = Flask(__name__)
 
@@ -17,6 +29,11 @@ tasks = [
         'done': False
     }
 ]
+
+@app.route('/list/<page>')
+def get_list(page):
+    games = GameNews.query_all(int(page))
+    return jsonify(data=games)
 
 @app.route('/todo/api/v1.0/tasks', methods=['GET'])
 def get_tasks():

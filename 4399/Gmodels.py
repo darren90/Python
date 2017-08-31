@@ -47,5 +47,32 @@ class GameNews(object):
         conn.close()
         return users
 
+
+    @staticmethod
+    def query_all(page):
+        count = 20
+        conn = get_conn()
+        cursor = conn.cursor()
+        sql = "SELECT title,detail_url,icon_url,sub_title from GameNews order by id asc limit %d,%d" % (page*count, page*(1+count))
+        cursor.execute(sql)
+        rows = cursor.fetchall()
+        users = []
+        for row in rows:
+            user = GameNews(row[0],row[1],row[2],row[3])
+            user_json = user.to_json()
+            users.append(user_json)
+        conn.commit()
+        cursor.close()
+        conn.close()
+        return users
+
+    def to_json(self):
+        return {
+            'title': self.title,
+            'detail_url': self.detail_url,
+            'icon_url': self.icon_url,
+            'sub_title': self.sub_title,
+        }
+
     def __str__(self):
         return "id:{}-name:{}".format(self.title,self.detail_url)
