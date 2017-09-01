@@ -30,7 +30,7 @@ tasks = [
     }
 ]
 
-@app.route('/index')
+@app.route('/')
 def index():
     return "hello tengfei"
 
@@ -56,7 +56,7 @@ def get_task(task_id):
 
 @app.errorhandler(404)
 def not_found(error):
-    return make_response(jsonify({'error': 'Not found'}), 404)
+    return jsonify({'error': 'Not found'})
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0', port=8080)
