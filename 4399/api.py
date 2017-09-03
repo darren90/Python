@@ -42,7 +42,17 @@ def not_found():
 @app.route('/list/<page>')
 def get_list(page):
     games = GameNews.query_all(int(page))
-    return jsonify(data=games)
+    # return jsonify(data=games)
+    return  jsonify(status="success",datas=[game.to_json() for game in games])
+
+
+
+
+
+
+
+
+
 
 @app.route('/todo/api/v1.0/tasks', methods=['GET'])
 def get_tasks():
