@@ -10,7 +10,7 @@ def hello():
 
 
 def deploy():
-    with cd('home/ubuntu/Python/4399'):
+    with cd('/home/ubuntu/Python/4399'):
         run('git pull')
         sudo('supervisorctl restart game_api')
         sudo('supervisorctl status')
