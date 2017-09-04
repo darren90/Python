@@ -1,4 +1,18 @@
 
+
+
+CREATE TABLE fei.`GameNews` (
+  `id` int(110) NOT NULL AUTO_INCREMENT,
+  `title` varchar(450) DEFAULT NULL,
+  `detail_url` varchar(450) DEFAULT NULL,
+  `icon_url` varchar(450) DEFAULT NULL,
+  `sub_title` varchar(450) DEFAULT NULL,
+  `detail_content` varchar(2000) DEFAULT NULL,
+  `detail_blob` blob,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
 CREATE TABLE fei.`spiderdb` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `url` varchar(450) DEFAULT NULL,
@@ -18,12 +32,16 @@ CREATE TABLE `fei`.`GameNews_Content` (
 
 
 CREATE TABLE `fei`.`GameNews_Content` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(110) NOT NULL AUTO_INCREMENT,
+  `idStr` int(110) NULL,
   `url` varchar(450) DEFAULT NULL,
   `detail_content` LONGTEXT NULL,
    PRIMARY KEY (`id`));
 
 
+
+
+TRUNCATE `fei`.`spiderdb`;
 TRUNCATE `fei`.`GameNews`;
 
 

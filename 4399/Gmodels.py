@@ -37,18 +37,18 @@ class GameNews(object):
     #     self.icon_url = icon_url
     #     self.sub_title = sub_title
 
-    def __init__(self,title,detail_url,icon_url,sub_title,detail_content):
+    def __init__(self,title,detail_url,icon_url,sub_title):
         self.title = title
         self.detail_url = detail_url
         self.icon_url = icon_url
         self.sub_title = sub_title
-        self.detail_content = detail_content;
+        self.idStr = 0
 
 
     def save(self):
         conn = get_conn()
         cursor = conn.cursor()
-        sql_sel = "select * from GameNews where title = \'%s\' and detail_content = \'%s\' ;" % (self.title,self.detail_content)
+        sql_sel = "select * from GameNews where title = \'%s\' and detail_url = \'%s\' ;" % (self.title,self.detail_url)
         cursor.execute(sql_sel)
         rows = cursor.fetchall()
         # 判断是否已经储存过
@@ -62,10 +62,28 @@ class GameNews(object):
         cursor.close()
         conn.close()
 
+    def get_gameNews_id(self):
+        conn = get_conn()
+        cursor = conn.cursor()
+        sql_sel = "select id from GameNews where title = \'%s\' and detail_url = \'%s\' ;" % (self.title,self.detail_url)
+        # print sql_sel
+        cursor.execute(sql_sel)
+        rows = cursor.fetchall()
+
+        result_id = 0
+        if len(rows) != 0:
+            result_id = int(rows[0][0])
+
+        cursor.close()
+        conn.close()
+        return  result_id
+
+
+    # 废弃
     def upate(self):
         conn = get_conn()
         cursor = conn.cursor()
-        self.detail_content = MySQLdb.escape_string(self.detail_content.encode('utf-8'))
+        # self.detail_content = MySQLdb.escape_string(self.detail_content.encode('utf-8'))
         # print '---detail ' + self.detail_content
 
         # detail_blob = pickle.dumps(self.detail_content, protocol=1)
@@ -107,12 +125,13 @@ class GameNews(object):
         count = 20
         conn = get_conn()
         cursor = conn.cursor()
-        sql = "SELECT title,detail_url,icon_url,sub_title from GameNews order by id asc limit %d,%d" % (page*count, page*(1+count))
+        sql = "SELECT title,detail_url,icon_url,sub_title,id from GameNews order by id asc limit %d,%d" % (page*count, page*(1+count))
         cursor.execute(sql)
         rows = cursor.fetchall()
         users = []
         for row in rows:
             user = GameNews(row[0],row[1],row[2],row[3])
+            user.idStr = row[4]
             # user_json = user.to_json()
             users.append(user)
         conn.commit()
@@ -122,6 +141,7 @@ class GameNews(object):
 
     def to_json(self):
         return {
+            'idStr': self.idStr,
             'title': self.title,
             'detail_url': self.detail_url,
             'icon_url': self.icon_url,
@@ -134,7 +154,8 @@ class GameNews(object):
 
 
 class GameNews_Content(object):
-    def __init__(self,url,detail_content):
+    def __init__(self,idStr,url,detail_content):
+        self.idStr = idStr
         self.url = url
         self.detail_content = detail_content
 
@@ -143,7 +164,7 @@ class GameNews_Content(object):
 
         conn = get_conn()
         cursor = conn.cursor()
-        sql = "INSERT into GameNews_Content (url,detail_content) values (\"%s\" ,\"%s\" )" % (self.url,self.detail_content)
+        sql = "INSERT into GameNews_Content (idStr, url,detail_content) values (%d ,\"%s\" ,\"%s\" )" % (self.idStr,self.url,self.detail_content)
         # print sql
         cursor.execute(sql)
         conn.commit()
@@ -151,12 +172,11 @@ class GameNews_Content(object):
         conn.close()
 
     @staticmethod
-    def query_content(self, url):
+    def query_content(idStr):
         conn = get_conn()
         cursor = conn.cursor()
-
-        sql = "select detail_content GameNews where url = \"%s\" ;" % (url)
-        print '--:sql: %s' % sql
+        sql = "select detail_content from GameNews_Content where idStr = \"%s\" ;" % (idStr)
+        print '-query_content-:sql: %s' % sql
         content = ""
         cursor.execute(sql)
         rows = cursor.fetchall()
@@ -166,6 +186,13 @@ class GameNews_Content(object):
         cursor.close()
         conn.close()
         return content
+
+    def to_json(self):
+        return {
+            'idStr' : self.idStr,
+            'detail_url': self.detail_url,
+            'detail_content': self.detail_content,
+        }
 
 
 

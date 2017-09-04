@@ -58,7 +58,7 @@ class spider(object):
            # print '---url:%s,hadSpider:%d'%(url,isHadSpider)
            if isHadSpider == True:
                print '地址：%s 已经爬取，并且内容没有更新' % page_url
-               continue
+               # continue
            else:
                print '地址：%s 没有爬取' % page_url
                SpiderdbModel.saveSpider(page_url, html)
@@ -82,7 +82,7 @@ class spider(object):
                 # 简介
                 brief = img_s.find('p').get_text()
 
-                gNews = GameNews(title, jump_url_s, img_url, brief,'')
+                gNews = GameNews(title, jump_url_s, img_url, brief)
                 gNews.save()
                 links_arary.append(gNews)
 
@@ -106,8 +106,9 @@ class spider(object):
                 # print (type(con))
 
                 # update 数据库
-                contentModel = GameNews_Content(gmodel.detail_url, con)
-                # gmodel.detail_content = con
+                idStr = gmodel.get_gameNews_id()
+                print 'game_idStr: %s' % idStr
+                contentModel = GameNews_Content(idStr,gmodel.detail_url, con)
                 contentModel.save()
                 # print gmodel
 

@@ -9,11 +9,42 @@ import types
 import urlparse
 import sys
 from Gmodels import GameNews
+from Gmodels import GameNews_Content
 
 reload(sys)
 sys.setdefaultencoding("utf-8")
 
 app = Flask(__name__)
+
+
+
+@app.route('/')
+def index():
+    return "hello tengfei,hello"
+
+@app.route('/error')
+def not_found():
+    print '404 not found'
+    return jsonify({'error': 'Not found'})
+
+@app.route('/list/<page>')
+def get_list(page):
+    games = GameNews.query_all(int(page))
+    # return jsonify(data=games)
+    return  jsonify(status="success",datas=[game.to_json() for game in games])
+
+@app.route('/html_content/<idStr>')
+def get_html_content(idStr):
+    content = GameNews_Content.query_content(idStr)
+    return  jsonify(status="success",data={'content' : content})
+
+
+
+
+
+
+
+
 
 tasks = [
     {
@@ -29,29 +60,6 @@ tasks = [
         'done': False
     }
 ]
-
-
-@app.route('/')
-def index():
-    return "hello tengfei,hello"
-
-@app.route('/error')
-def not_found():
-    return jsonify({'error': 'Not found'})
-
-@app.route('/list/<page>')
-def get_list(page):
-    games = GameNews.query_all(int(page))
-    # return jsonify(data=games)
-    return  jsonify(status="success",datas=[game.to_json() for game in games])
-
-
-
-
-
-
-
-
 
 
 @app.route('/todo/api/v1.0/tasks', methods=['GET'])
