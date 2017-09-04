@@ -58,7 +58,7 @@ class spider(object):
            # print '---url:%s,hadSpider:%d'%(url,isHadSpider)
            if isHadSpider == True:
                print '地址：%s 已经爬取，并且内容没有更新' % page_url
-               # continue
+               continue
            else:
                print '地址：%s 没有爬取' % page_url
                SpiderdbModel.saveSpider(page_url, html)

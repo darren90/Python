@@ -15,7 +15,7 @@ def hello():
 def spider():
     with cd('/home/ubuntu/Python/4399'):
         run('git pull')
-        run('phython api.py')
+        run('python api.py')
 
 
 # 拉去github最新代码，并且重新部署api请求

@@ -8,7 +8,6 @@ CREATE TABLE fei.`GameNews` (
   `icon_url` varchar(450) DEFAULT NULL,
   `sub_title` varchar(450) DEFAULT NULL,
   `detail_content` varchar(2000) DEFAULT NULL,
-  `detail_blob` blob,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -20,10 +19,6 @@ CREATE TABLE fei.`spiderdb` (
   `stype` varchar(450) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
-
-
-ALTER TABLE `fei`.`GameNews`
-ADD COLUMN `detail_blob` BLOB(2000) NULL AFTER `detail_content`;
 
 
 CREATE TABLE `fei`.`GameNews_Content` (
@@ -45,3 +40,4 @@ TRUNCATE `fei`.`spiderdb`;
 TRUNCATE `fei`.`GameNews`;
 
 
+# DROP TABLE `fei`.`GameNews`;
