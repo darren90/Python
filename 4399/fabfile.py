@@ -15,7 +15,7 @@ def hello():
 def spider():
     with cd('/home/ubuntu/Python/4399'):
         run('git pull')
-        run('python api.py')
+        run('python spider_game.py')
 
 
 # 拉去github最新代码，并且重新部署api请求
@@ -24,3 +24,7 @@ def deploy():
         run('git pull')
         sudo('supervisorctl restart game_api')
         sudo('supervisorctl status')
+
+
+
+# 运行执行 : fab deploy

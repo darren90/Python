@@ -31,7 +31,7 @@ CREATE TABLE `fei`.`GameNews_Content` (
   `idStr` int(110) NULL,
   `url` varchar(450) DEFAULT NULL,
   `detail_content` LONGTEXT NULL,
-   PRIMARY KEY (`id`));
+   PRIMARY KEY (`id`)) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 
 
@@ -41,3 +41,4 @@ TRUNCATE `fei`.`GameNews`;
 
 
 # DROP TABLE `fei`.`GameNews`;
+DROP TABLE `fei`.`GameNews_Content`;
