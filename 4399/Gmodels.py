@@ -122,10 +122,11 @@ class GameNews(object):
 
     @staticmethod
     def query_all(page):
-        count = 20
+        count = 15
         conn = get_conn()
         cursor = conn.cursor()
-        sql = "SELECT title,detail_url,icon_url,sub_title,id from GameNews order by id asc limit %d,%d" % (page*count, page*(1+count))
+        sql = "SELECT title,detail_url,icon_url,sub_title,id from GameNews order by id asc limit %d,%d" % ((page - 1)*count, count)
+        print sql
         cursor.execute(sql)
         rows = cursor.fetchall()
         users = []

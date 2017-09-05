@@ -14,8 +14,10 @@ xcuserdata
 .xccheckout .moved-aside
 DerivedData
 *.xcuserstate
- 
 
+
+.DS_Store
+*.pyc
 .env
 .idea
 .idea/
