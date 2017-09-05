@@ -9,6 +9,8 @@ except ImportError:
     import pickle
 
 
+import HTMLParser
+
 
 def get_conn():
     host = "127.0.0.1"
@@ -186,7 +188,11 @@ class GameNews_Content(object):
 
         cursor.close()
         conn.close()
-        return content
+        html_parser = HTMLParser.HTMLParser()
+        newtitle = html_parser.unescape(content)
+        # newtitle = newtitle.replace('\n','')
+        print newtitle
+        return newtitle
 
     def to_json(self):
         return {
