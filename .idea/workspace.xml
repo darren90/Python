@@ -20,7 +20,7 @@
     <SUITE FILE_PATH="coverage/Python$app.coverage" NAME="app Coverage Results" MODIFIED="1504185021005" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/study-mysql" />
     <SUITE FILE_PATH="coverage/Python$testbase.coverage" NAME="testbase Coverage Results" MODIFIED="1504420589926" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/4399" />
     <SUITE FILE_PATH="coverage/Python$spider_game__1_.coverage" NAME="spider_game (1) Coverage Results" MODIFIED="1504534877570" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/4399" />
-    <SUITE FILE_PATH="coverage/Python$api.coverage" NAME="api Coverage Results" MODIFIED="1504622133116" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/4399" />
+    <SUITE FILE_PATH="coverage/Python$api.coverage" NAME="api Coverage Results" MODIFIED="1504623994999" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/4399" />
     <SUITE FILE_PATH="coverage/Python$tv.coverage" NAME="tv Coverage Results" MODIFIED="1504017191506" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/autohome" />
   </component>
   <component name="DatabaseView">
@@ -38,6 +38,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="tv.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/autohome/tv.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="591">
+              <caret line="46" column="33" lean-forward="true" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="api.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/4399/api.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -83,26 +93,26 @@
       <file leaf-file-name="Gmodels.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/4399/Gmodels.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
-              <caret line="193" column="22" lean-forward="true" selection-start-line="193" selection-start-column="22" selection-end-line="193" selection-end-column="22" />
+            <state relative-caret-position="330">
+              <caret line="193" column="32" lean-forward="false" selection-start-line="193" selection-start-column="32" selection-end-line="193" selection-end-column="32" />
               <folding>
                 <element signature="e#24#39#0" expanded="true" />
-                <marker date="1504622133000" expanded="true" signature="1080:1147" ph="select * fro... GameNews" />
-                <marker date="1504622133000" expanded="true" signature="1385:1464" ph="INSERT into GameNews... " />
-                <marker date="1504622133000" expanded="true" signature="1391:1464" ph="INSERT into GameNews... " />
-                <marker date="1504622133000" expanded="true" signature="1726:1794" ph="select * fro... GameNews" />
-                <marker date="1504622133000" expanded="true" signature="2452:2519" ph="select * fro... GameNews" />
-                <marker date="1504622133000" expanded="true" signature="2768:2853" ph="UPDATE GameN... " />
-                <marker date="1504622133000" expanded="true" signature="3148:3170" ph="SELECT * fro... GameNews" />
-                <marker date="1504622133000" expanded="true" signature="3574:3633" ph="SELECT * fro... GameNews" />
-                <marker date="1504622133000" expanded="true" signature="3574:3659" ph="SELECT title... GameNews" />
-                <marker date="1504622133000" expanded="true" signature="3574:3661" ph="SELECT title... GameNews" />
-                <marker date="1504622133000" expanded="true" signature="4754:4839" ph="INSERT into GameNews_Content... " />
-                <marker date="1504622133000" expanded="true" signature="5120:5184" ph="select detai... GameNews_Content" />
-                <marker date="1504622133000" expanded="true" signature="5120:5185" ph="UPDATE GameN... " />
-                <marker date="1504622133000" expanded="true" signature="6179:6247" ph="INSERT into spiderdb... " />
-                <marker date="1504622133000" expanded="true" signature="6634:6691" ph="select * fro... spiderdb" />
-                <marker date="1504622133000" expanded="true" signature="7055:7084" ph="SELECT * fro... spiderdb" />
+                <marker date="1504623994000" expanded="true" signature="1080:1147" ph="select * fro... GameNews" />
+                <marker date="1504623994000" expanded="true" signature="1385:1464" ph="INSERT into GameNews... " />
+                <marker date="1504623994000" expanded="true" signature="1391:1464" ph="INSERT into GameNews... " />
+                <marker date="1504623994000" expanded="true" signature="1726:1794" ph="select * fro... GameNews" />
+                <marker date="1504623994000" expanded="true" signature="2452:2519" ph="select * fro... GameNews" />
+                <marker date="1504623994000" expanded="true" signature="2768:2853" ph="UPDATE GameN... " />
+                <marker date="1504623994000" expanded="true" signature="3148:3170" ph="SELECT * fro... GameNews" />
+                <marker date="1504623994000" expanded="true" signature="3574:3633" ph="SELECT * fro... GameNews" />
+                <marker date="1504623994000" expanded="true" signature="3574:3659" ph="SELECT title... GameNews" />
+                <marker date="1504623994000" expanded="true" signature="3574:3661" ph="SELECT title... GameNews" />
+                <marker date="1504623994000" expanded="true" signature="4754:4839" ph="INSERT into GameNews_Content... " />
+                <marker date="1504623994000" expanded="true" signature="5120:5184" ph="select detai... GameNews_Content" />
+                <marker date="1504623994000" expanded="true" signature="5120:5185" ph="UPDATE GameN... " />
+                <marker date="1504623994000" expanded="true" signature="6259:6327" ph="INSERT into spiderdb... " />
+                <marker date="1504623994000" expanded="true" signature="6714:6771" ph="select * fro... spiderdb" />
+                <marker date="1504623994000" expanded="true" signature="7135:7164" ph="SELECT * fro... spiderdb" />
               </folding>
             </state>
           </provider>
@@ -903,14 +913,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/autohome/tv.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-496">
-          <caret line="0" column="10" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/study/flaskapp.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -1054,28 +1056,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/autohome/tv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="591">
+          <caret line="46" column="33" lean-forward="true" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/4399/Gmodels.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="193" column="22" lean-forward="true" selection-start-line="193" selection-start-column="22" selection-end-line="193" selection-end-column="22" />
+        <state relative-caret-position="330">
+          <caret line="193" column="32" lean-forward="false" selection-start-line="193" selection-start-column="32" selection-end-line="193" selection-end-column="32" />
           <folding>
             <element signature="e#24#39#0" expanded="true" />
-            <marker date="1504622133000" expanded="true" signature="1080:1147" ph="select * fro... GameNews" />
-            <marker date="1504622133000" expanded="true" signature="1385:1464" ph="INSERT into GameNews... " />
-            <marker date="1504622133000" expanded="true" signature="1391:1464" ph="INSERT into GameNews... " />
-            <marker date="1504622133000" expanded="true" signature="1726:1794" ph="select * fro... GameNews" />
-            <marker date="1504622133000" expanded="true" signature="2452:2519" ph="select * fro... GameNews" />
-            <marker date="1504622133000" expanded="true" signature="2768:2853" ph="UPDATE GameN... " />
-            <marker date="1504622133000" expanded="true" signature="3148:3170" ph="SELECT * fro... GameNews" />
-            <marker date="1504622133000" expanded="true" signature="3574:3633" ph="SELECT * fro... GameNews" />
-            <marker date="1504622133000" expanded="true" signature="3574:3659" ph="SELECT title... GameNews" />
-            <marker date="1504622133000" expanded="true" signature="3574:3661" ph="SELECT title... GameNews" />
-            <marker date="1504622133000" expanded="true" signature="4754:4839" ph="INSERT into GameNews_Content... " />
-            <marker date="1504622133000" expanded="true" signature="5120:5184" ph="select detai... GameNews_Content" />
-            <marker date="1504622133000" expanded="true" signature="5120:5185" ph="UPDATE GameN... " />
-            <marker date="1504622133000" expanded="true" signature="6179:6247" ph="INSERT into spiderdb... " />
-            <marker date="1504622133000" expanded="true" signature="6634:6691" ph="select * fro... spiderdb" />
-            <marker date="1504622133000" expanded="true" signature="7055:7084" ph="SELECT * fro... spiderdb" />
+            <marker date="1504623994000" expanded="true" signature="1080:1147" ph="select * fro... GameNews" />
+            <marker date="1504623994000" expanded="true" signature="1385:1464" ph="INSERT into GameNews... " />
+            <marker date="1504623994000" expanded="true" signature="1391:1464" ph="INSERT into GameNews... " />
+            <marker date="1504623994000" expanded="true" signature="1726:1794" ph="select * fro... GameNews" />
+            <marker date="1504623994000" expanded="true" signature="2452:2519" ph="select * fro... GameNews" />
+            <marker date="1504623994000" expanded="true" signature="2768:2853" ph="UPDATE GameN... " />
+            <marker date="1504623994000" expanded="true" signature="3148:3170" ph="SELECT * fro... GameNews" />
+            <marker date="1504623994000" expanded="true" signature="3574:3633" ph="SELECT * fro... GameNews" />
+            <marker date="1504623994000" expanded="true" signature="3574:3659" ph="SELECT title... GameNews" />
+            <marker date="1504623994000" expanded="true" signature="3574:3661" ph="SELECT title... GameNews" />
+            <marker date="1504623994000" expanded="true" signature="4754:4839" ph="INSERT into GameNews_Content... " />
+            <marker date="1504623994000" expanded="true" signature="5120:5184" ph="select detai... GameNews_Content" />
+            <marker date="1504623994000" expanded="true" signature="5120:5185" ph="UPDATE GameN... " />
+            <marker date="1504623994000" expanded="true" signature="6259:6327" ph="INSERT into spiderdb... " />
+            <marker date="1504623994000" expanded="true" signature="6714:6771" ph="select * fro... spiderdb" />
+            <marker date="1504623994000" expanded="true" signature="7135:7164" ph="SELECT * fro... spiderdb" />
           </folding>
         </state>
       </provider>

@@ -190,7 +190,8 @@ class GameNews_Content(object):
         conn.close()
         html_parser = HTMLParser.HTMLParser()
         newtitle = html_parser.unescape(content)
-        # newtitle = newtitle.replace('\n','')
+        # newtitle = newtitle.replace('\n','<br/>') #&nbsp
+        # newtitle = MySQLdb.escape_string(content.encode('utf-8'))
         print newtitle
         return newtitle
 
