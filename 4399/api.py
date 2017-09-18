@@ -20,7 +20,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return "hello tengfei,hello"
+    return "hello tengfei"
 
 @app.route('/error')
 def not_found():
